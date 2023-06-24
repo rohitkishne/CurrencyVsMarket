@@ -2,6 +2,7 @@ const currRow = document.getElementById("currency-update");
 
 const apiData = 'https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=10&page=1&sparkline=false'
 
+
 function fetchData(apiData) {
     return new Promise(async (resolve, reject)=>{
         try{
@@ -11,6 +12,11 @@ function fetchData(apiData) {
         }
         catch(error)
         {
+            let p = document.createElement("p");
+            p.className = 'error-log'
+            p.innerText ="You Exceeded a limit of Fetching Data !";
+            currRow.appendChild(p);
+            currRow.style.borderBottom ='none'
             reject(error);
         }
     })
@@ -37,7 +43,6 @@ function renderData(data){
         <td>Mkt Cap: ${obj.market_cap}</td>`
         currRow.appendChild(row)
     })
-    
 }
 
 
