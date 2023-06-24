@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currency Vs Market</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <div class="title">
+        <h1>Currency Vs Market</h1>
+    </div>
+    <main class="container">
+        <section class="filters">
+            <div class="search">
+                <input type="text" id="search" placeholder="Search by Name or Symbol">
+            </div>
+            <div class="sort-by-mkt-cap">
+                <button type="button" id="sortMktCap">
+                   Sort By Mkt Cap 
+                </button>
+            </div>
+            <div class="sort-by-percentage">
+                <button type="button" id="sortPercentage">
+                    Sort By Percentage
+                 </button>
+            </div>
+        </section>
+        <section class="currency-table">
+            <table id="currency-update" class="market-table">
+                <!-- <tr>
+                    <td>Bitcoin</td>
+                    <td>BTC</td>
+                    <td>$200023</td>
+                    <td>$45613313</td>
+                    <td>3.49%</td>
+                    <td>Mkt Cap:$56546546513</td>
+                </tr> -->
+            </table>
+        </section>
+    </main>
+    <script src="./index.js"></script>
+</body>
+</html>
